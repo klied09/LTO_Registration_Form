@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    
+    <style>
+        div.header{
+            
+        }
+        form.registration{
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Registration Form</h1>
+    </div>
+    
+
+    <form id="registration" method="post">
+        <!--pattern="[A-za-z](3)" maxlength="8"-->
+        <label for="username">Username:</label> <input type="text" name="username"><br>
+        <label for="email">Email:</label><input type="email" name="email"><br>
+        <!--pattern="[0-9](4)--[0-9](7)"-->
+        <label for="contact">Contact:</label><input type="tel" name="contact"><br>
+        <!--min="1" max="100"-->
+        <label for="age">Age</label><input type="number" name="age"><br>
+        <!--min="1900-01-01" max="2022-01-01"-->
+        <label for="birthday">Birthdate:</label><input type="date"><br>
+        
+        <!--SELECTION-->
+        <!--radio button-->
+        <p>Are you graduating?</p>
+        <input type="radio" name="question" value="yes"><label for="yes">Yes</label>
+        <input type="radio" name="question" value="no"><label for="no">No</label>
+        <input type="radio" name="question" value="maybe"><label for="maybe">Maybe</label>
+        <input type="radio" name="question" value="depende kay osorio"><label for="depende kay osorio">Depende kay osorio</label>
+        
+        <!--checkbox-->
+        <p>Subjects Enrolled:</p>
+        <input type="checkbox" name="subject" value="T-CPETewan"><label>Microservices</label>
+        <input type="checkbox" name="subject" value="T-CPETidk"><label>Embedded Systems</label>
+        <input type="checkbox" name="subject" value="T-CPETdikoalam"><label>Thesis</label>
+        <input type="checkbox" name="subject" value="T-CPETdkdc"><label>Hydrolics</label>
+
+        <!--Dropdown-->
+        <p>College?</p>
+        <select name="college" id="">
+            <option value="CEAT">CEAT</option>
+            <option value="CBAA">CBAA</option>
+            <option value="CSCS">CSCS</option>
+            <option value="CLAC">CLAC</option>
+        </select>
+        <br>
+        
+        <input type="submit">
+    </form>
+</body>
+</html>
