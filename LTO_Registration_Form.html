@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #6040b2;
+        }
+        div#header{
+            position: fixed;
+            width: 100%;
+            height: 10%;
+            background-color: black;
+            left: 0%;
+            top: 0%;
+        }
+        h1#header{
+            color: white;
+            font-family: sans-serif;
+        }
+        img#coat{
+            height: 80%;
+        }
+        img#lto{
+            height: 80%;
+        }
+        div#ins{
+
+        }
+        h1#ins{
+            font-family: sans-serif;
+
+        }
+        div.body{
+            margin-top: 5%;
+            width: 90%;
+            background-color: whitesmoke;
+            border-radius: 25px;
+            padding: 2%;
+        }
+        .header{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .contbody{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            font-family: sans-serif;
+        }
+        label{
+            font-family: sans-serif;
+        }
+        .submit{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="header">
+        <img src="COA-Philippines.png" id="coat">
+        <h1 id="header"> Department of Transportation & Comminucations: Land Transportation Office </h1>
+        <img src="LTOLogo.png" id="lto">
+    </div>
+
+    <div class="contbody">
+        <div class="body">
+            <div id="ins">
+                <h1 id="ins">Application for Driver's License</h1>
+            </div>
+            
+            <div class="container">
+                <form method="post" action="lto_connect.php">
+                    <p>INSTRUCTIONS:</p>
+                    <p>1. ACCOMPLISH THE FORM CORRECTLY</p>
+                    <p>2. PRINT DATA LEGIBLY IN CAPITAL LETTERS</p>
+                    <p>3. SUBMIT THIS FORM TO THE CSR/EVALUATOR TOGETHER WITH THE REQUIRED SUPPORTING DOCUMENTS</p>
+
+                    <p>Name: (Family name, First Name, Middle Name)</p>
+                    <input type="text" id="LastName" name="LastName">
+                    <input type="text" id="FirstName" name="FirstName">
+                    <input type="text" id="MiddleName" name="MiddleName"><br>
+
+                    <p>Tel. No/CP No.</p>
+                    <label for="Contact"></label><input type="tel" name="Contact">
+                    <p>Tin No.</p>
+                    <label for="TinNumber"></label><input type="number" name="TinNumber"><br>
+
+                    <p>Present Address: (No. Street, City/Municipality, Province)</p>
+                    <label for="Street"></label><input type="text" name="Street">
+                    <select name="City">
+                        <optgroup label="CAVITE">
+                            <option value="Dasmarinas City">DASMARINAS CITY</option>
+                            <option value="Cavite City">CAVITE CITY</option>
+                            <option value="Tagaytay City">TAGAYTAY CITY</option>
+                            <option value="Trece Martires City">TRECE MARTIRES CITY</option>
+                            <option value="Alfonso">ALFONSO</option>
+                            <option value="Amadeo">AMADEO</option>
+                            <option value="Bacoor">BACOOR</option>
+                            <option value="Carmona">CARMONA</option>
+                            <option value="General Emilio Aguinaldo">GENERAL EMILIO AGUINALDO</option>
+                            <option value="General Mariano Alvarez">GENERAL MARIANO ALVAREZ</option>
+                            <option value="General Trias">GENERAL TRIAS</option>
+                            <option value="Imus">IMUS</option>
+                            <option value="Indang">INDANG</option>
+                            <option value="Kawit">KAWIT</option>
+                            <option value="Magallanes">MAGALLANES</option>
+                            <option value="Maragondon">MARAGONDON</option>
+                            <option value="Mendez">MENDEZ</option>
+                            <option value="Naic">NAIC</option>
+                            <option value="Noveleta">NOVELETA</option>
+                            <option value="Rosario">ROSARIO</option>
+                            <option value="Silang">SILANG</option>
+                            <option value="Tanza">TANZA</option>
+                            <option value="Ternate">TERNATE</option>
+                        </optgroup>
+                        <optgroup label="BATANGAS">
+                            <option value="Batangas City">BATANGAS CITY</option>
+                            <option value="Lipa City">LIPA CITY</option>
+                            <option value="Tanauan City">TANAUAN CITY</option>
+                            <option value="Sto. Tomas City">STO. TOMAS CITY</option>
+                            <option value="Batangas">BATANGAS</option>
+                            <option value="Bauan">BAUAN</option>
+                            <option value="Nasugbu">NASUGBU</option>
+                            <option value="Calaca">CALACA</option>
+                            <option value="Lemery">LEMERY</option>
+                            <option value="San Pascual">SAN PASCUAL</option>
+                            <option value="Taal">TAAL</option>
+                            <option value="Agoncillo">AGONCILLO</option>
+                            <option value="Alitagtag">ALITAGTAG</option>
+                            <option value="Balayan">BALAYAN</option>
+                            <option value="Calatagan">CALATAGAN</option>
+                            <option value="Cuenca">CUENCA</option>
+                            <option value="Ibaan">IBAAN</option>
+                            <option value="Laurel">LAUREL</option>
+                            <option value="Lian">LIAN</option>
+                            <option value="Lobo">LOBO</option>
+                            <option value="Mabini">MABINI</option>
+                            <option value="Malvar">MALVAR</option>
+                            <option value="Mataas na Kahoy">MATAAS NA KAHOY</option>
+                            <option value="Padre Garcia">PADRE GARCIA</option>
+                            <option value="Rosario">ROSARIO</option>
+                            <option value="San Jose">SAN JOSE</option>
+                            <option value="San Juan">SAN JUAN</option>
+                            <option value="San Luis">SAN LUIS</option>
+                            <option value="San Nicolas">SAN NICOLAS</option>
+                            <option value="San Teresita">SAN TERESITA</option>
+                            <option value="Taysan">TAYSAN</option>
+                            <option value="Tingloy">TINGLOY</option>
+                            <option value="Tuy">TUY</option>
+                        </optgroup>
+                        <optgroup label="LAGUNA">
+                            <option value="Lucena City">LUCENA CITY</option>
+                            <option value="Tayabas City">TAYABAS CITY</option>
+                            <option value="Candelaria">CANDELARIA</option>
+                            <option value="Dolores">DOLORES</option>
+                            <option value="Lucban">LUCBAN</option>
+                            <option value="Sariaya">SARIAYA</option>
+                            <option value="Tiaong">TIAONG</option>
+                            <option value="Agdangan">AGDANGAN</option>
+                            <option value="Alabat">ALABAT</option>
+                            <option value="Atimonan">ATIMONAN</option>
+                            <option value="Buenavista">BUENAVISTA</option>
+                            <option value="Burdeos">BURDEOS</option>
+                            <option value="Calauag">CALAUAG</option>
+                            <option value="Catanauan">CATANAUAN</option>
+                            <option value="General Luna">GENERAL LUNA</option>
+                            <option value="General Nakar">GENERAL NAKAR</option>
+                            <option value="Guinayangan">GUINAYANGAN</option>
+                            <option value="Gumaca">GUMACA</option>
+                            <option value="Infanta">INFANTA</option>
+                            <option value="Jomalig">JOMALIG</option>
+                            <option value="Lopez">LOPEZ</option>
+                            <option value="Macalelon">MACALELON</option>
+                            <option value="Mauban">MAUBAN</option>
+                            <option value="Mulanay">MULANAY</option>
+                            <option value="Padre Burgos">PADRE BURGOS</option>
+                            <option value="Pagbilao">PAGBILAO</option>
+                            <option value="Panukulan">PANUKULAN</option>
+                            <option value="Patnanungan">PATNANUNGAN</option>
+                            <option value="Perez">PEREZ</option>
+                            <option value="Pitogo">PITOGO</option>
+                            <option value="Plaridel">PLARIDEL</option>
+                            <option value="Polillo">POLILLO</option>
+                            <option value="Quezon">QUEZON</option>
+                            <option value="Real">REAL</option>
+                            <option value="Sampaloc">SAMPALOC</option>
+                            <option value="San Andres">SAN ANDRES</option>
+                            <option value="San Antonio">SAN ANTONIO</option>
+                            <option value="San Francisco">SAN FRANCISCO</option>
+                            <option value="San Narciso">SAN NARCISO</option>
+                            <option value="Sariaya">SARIAYA</option>
+                            <option value="Tagkawayan">TAGKAWAYAN</option>
+                            <option value="Tiaong">TIAONG</option>
+                            <option value="Unisan">UNISAN</option>
+                        </optgroup>
+                        <optgroup label="RIZAL">
+                            <option value="Antipolo">ANTIPOLO CITY</option>
+                            <option value="Angono">ANGONO</option>
+                            <option value="Baras">BARAS</option>
+                            <option value="Binangonan">BINANGONAN</option>
+                            <option value="Cainta">CAINTA</option>
+                            <option value="Carmona">CARDONA</option>
+                            <option value="Jalajala">JALAJALA</option>
+                            <option value="Morong">MORONG</option>
+                            <option value="Pilila">PILILLA</option>
+                            <option value="Rodriguez">RODRIGUEZ (MONTALBAN)</option>
+                            <option value="San Mateo">SAN MATEO</option>
+                            <option value="Tanay">TANAY</option>
+                            <option value="Taytay`">TAYTAY</option>
+                            <option value="Teresa`">TERESA</option>
+                        </optgroup>
+                    </select>
+
+                    <select name="Province">
+                        <option value="Cavite">CAVITE</option>
+                        <option value="Laguna">LAGUNA</option>
+                        <option value="Batangas">BATANGAS</option>
+                        <option value="Rizal">RIZAL</option>
+                        <option value="Quezon">QUEZON</option>
+                    </select>
+
+                    <p>ZIP Code</p>
+                    <label for="ZipCode"></label> </label><input type="number" name="ZipCode"><br>
+                    <p>Nationality:</p>
+                    <select name="Nationality">
+                        <option value="Filipino">Filipino</option>
+                        <option value="">&dash;&dash;&dash;&dash;&dash;</option>
+                        <option value="Afghan">Afghan</option>
+                        <option value="Albanian">Albanian</option>
+                        <option value="Algerian">Algerian</option>
+                        <option value="American">American</option>
+                        <option value="Andorran">Andorran</option>
+                        <option value="Angolan">Angolan</option>
+                        <option value="Antiguans">Antiguans</option>
+                        <option value="Argentinean">Argentinean</option>
+                        <option value="Armenian">Armenian</option>
+                        <option value="Australian">Australian</option>
+                        <option value="Austrian">Austrian</option>
+                        <option value="Azerbaijani">Azerbaijani</option>
+                        <option value="Bahamian">Bahamian</option>
+                        <option value="Bahraini">Bahraini</option>
+                        <option value="Bangladeshi">Bangladeshi</option>
+                        <option value="Barbadian">Barbadian</option>
+                        <option value="Barbudans">Barbudans</option>
+                        <option value="Batswana">Batswana</option>
+                        <option value="Belarusian">Belarusian</option>
+                        <option value="Belgian">Belgian</option>
+                        <option value="Belizean">Belizean</option>
+                        <option value="Beninese">Beninese</option>
+                        <option value="Bhutanese">Bhutanese</option>
+                        <option value="Bolivian">Bolivian</option>
+                        <option value="Bosnian">Bosnian</option>
+                        <option value="Brazilian">Brazilian</option>
+                        <option value="British">British</option>
+                        <option value="Bruneian">Bruneian</option>
+                        <option value="Bulgarian">Bulgarian</option>
+                        <option value="Burkinabe">Burkinabe</option>
+                        <option value="Burmese">Burmese</option>
+                        <option value="Burundian">Burundian</option>
+                        <option value="Cambodian">Cambodian</option>
+                        <option value="Cameroonian">Cameroonian</option>
+                        <option value="Canadian">Canadian</option>
+                        <option value="Cape Verdean">Cape Verdean</option>
+                        <option value="Central African">Central African</option>
+                        <option value="Chadian">Chadian</option>
+                        <option value="Chilean">Chilean</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Colombian">Colombian</option>
+                        <option value="Comoran">Comoran</option>
+                        <option value="Congolese">Congolese</option>
+                        <option value="Costa Rican">Costa Rican</option>
+                        <option value="Croatian">Croatian</option>
+                        <option value="Cuban">Cuban</option>
+                        <option value="Cypriot">Cypriot</option>
+                        <option value="Czech">Czech</option>
+                        <option value="Danish">Danish</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominican">Dominican</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="East Timorese">East Timorese</option>
+                        <option value="Ecuadorian">Ecuadorian</option>
+                        <option value="Egyptian">Egyptian</option>
+                        <option value="Emirian">Emirian</option>
+                        <option value="Equatorial Guinean">Equatorial Guinean</option>
+                        <option value="Eritrean">Eritrean</option>
+                        <option value="Estonian">Estonian</option>
+                        <option value="Ethiopian">Ethiopian</option>
+                        <option value="Fijian">Fijian</option>
+                        <option value="Finnish">Finnish</option>
+                        <option value="French">French</option>
+                        <option value="Gabonese">Gabonese</option>
+                        <option value="Gambian">Gambian</option>
+                        <option value="Georgian">Georgian</option>
+                        <option value="German">German</option>
+                        <option value="Ghanaian">Ghanaian</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Grenadian">Grenadian</option>
+                        <option value="Guatemalan">Guatemalan</option>
+                        <option value="Guinea-Bissauan">Guinea-Bissauan</option>
+                        <option value="Guinean">Guinean</option>
+                        <option value="Guyanese">Guyanese</option>
+                        <option value="Haitian">Haitian</option>
+                        <option value="Herzegovinian">Herzegovinian</option>
+                        <option value="Honduran">Honduran</option>
+                        <option value="Hungarian">Hungarian</option>
+                        <option value="I-Kiribati">I-Kiribati</option>
+                        <option value="Icelander">Icelander</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Indonesian">Indonesian</option>
+                        <option value="Iranian">Iranian</option>
+                        <option value="Iraqi">Iraqi</option>
+                        <option value="Irish">Irish</option>
+                        <option value="Israeli">Israeli</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Ivorian">Ivorian</option>
+                        <option value="Jamaican">Jamaican</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Jordanian">Jordanian</option>
+                        <option value="Kazakhstani">Kazakhstani</option>
+                        <option value="Kenyan">Kenyan</option>
+                        <option value="Kittian and Nevisian">Kittian and Nevisian</option>
+                        <option value="Kuwaiti">Kuwaiti</option>
+                        <option value="Kyrgyz">Kyrgyz</option>
+                        <option value="Laotian">Laotian</option>
+                        <option value="Latvian">Latvian</option>
+                        <option value="Lebanese">Lebanese</option>
+                        <option value="Liberian">Liberian</option>
+                        <option value="Libyan">Libyan</option>
+                        <option value="Liechtensteiner">Liechtensteiner</option>
+                        <option value="Lithuanian">Lithuanian</option>
+                        <option value="Luxembourger">Luxembourger</option>
+                        <option value="Macedonian">Macedonian</option>
+                        <option value="Malagasy">Malagasy</option>
+                        <option value="Malawian">Malawian</option>
+                        <option value="Malaysian">Malaysian</option>
+                        <option value="Maldivian">Maldivian</option>
+                        <option value="Malian">Malian</option>
+                        <option value="Maltese">Maltese</option>
+                        <option value="Marshallese">Marshallese</option>
+                        <option value="Mauritanian">Mauritanian</option>
+                        <option value="Mauritian">Mauritian</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Micronesian">Micronesian</option>
+                        <option value="Moldovan">Moldovan</option>
+                        <option value="Monacan">Monacan</option>
+                        <option value="Mongolian">Mongolian</option>
+                        <option value="Moroccan">Moroccan</option>
+                        <option value="Mosotho">Mosotho</option>
+                        <option value="Motswana">Motswana</option>
+                        <option value="Mozambican">Mozambican</option>
+                        <option value="Namibian">Namibian</option>
+                        <option value="Nauruan">Nauruan</option>
+                        <option value="Nepalese">Nepalese</option>
+                        <option value="New Zealander">New Zealander</option>
+                        <option value="Ni-Vanuatu">Ni-Vanuatu</option>
+                        <option value="Nicaraguan">Nicaraguan</option>
+                        <option value="Nigerian">Nigerian</option>
+                        <option value="Nigerien">Nigerien</option>
+                        <option value="North Korean">North Korean</option>
+                        <option value="Northern Irish">Northern Irish</option>
+                        <option value="Norwegian">Norwegian</option>
+                        <option value="Omani">Omani</option>
+                        <option value="Pakistani">Pakistani</option>
+                        <option value="Palauan">Palauan</option>
+                        <option value="Panamanian">Panamanian</option>
+                        <option value="Papua New Guinean">Papua New Guinean</option>
+                        <option value="Paraguayan">Paraguayan</option>
+                        <option value="Peruvian">Peruvian</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Qatari">Qatari</option>
+                        <option value="Romanian">Romanian</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Rwandan">Rwandan</option>
+                        <option value="Saint Lucian">Saint Lucian</option>
+                        <option value="Salvadoran">Salvadoran</option>
+                        <option value="Samoan">Samoan</option>
+                        <option value="San Marinese">San Marinese</option>
+                        <option value="Sao Tomean">Sao Tomean</option>
+                        <option value="Saudi">Saudi</option>
+                        <option value="Scottish">Scottish</option>
+                        <option value="Senegalese">Senegalese</option>
+                        <option value="Serbian">Serbian</option>
+                        <option value="Seychellois">Seychellois</option>
+                        <option value="Sierra Leonean">Sierra Leonean</option>
+                        <option value="Singaporean">Singaporean</option>
+                        <option value="Slovakian">Slovakian</option>
+                        <option value="Slovenian">Slovenian</option>
+                        <option value="Solomon Islander">Solomon Islander</option>
+                        <option value="Somali">Somali</option>
+                        <option value="South African">South African</option>
+                        <option value="South Korean">South Korean</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Sri Lankan">Sri Lankan</option>
+                        <option value="Sudanese">Sudanese</option>
+                        <option value="Surinamer">Surinamer</option>
+                        <option value="Swazi">Swazi</option>
+                        <option value="Swedish">Swedish</option>
+                        <option value="Swiss">Swiss</option>
+                        <option value="Syrian">Syrian</option>
+                        <option value="Taiwanese">Taiwanese</option>
+                        <option value="Tajik">Tajik</option>
+                        <option value="Tanzanian">Tanzanian</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Togolese">Togolese</option>
+                        <option value="Tongan">Tongan</option>
+                        <option value="Trinidadian or Tobagonian">Trinidadian or Tobagonian</option>
+                        <option value="Tunisian">Tunisian</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="Tuvaluan">Tuvaluan</option>
+                        <option value="Ugandan">Ugandan</option>
+                        <option value="Ukrainian">Ukrainian</option>
+                        <option value="Uruguayan">Uruguayan</option>
+                        <option value="Uzbekistani">Uzbekistani</option>
+                        <option value="Venezuelan">Venezuelan</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                        <option value="Welsh">Welsh</option>
+                        <option value="Yemenite">Yemenite</option>
+                        <option value="Zambian">Zambian</option>
+                        <option value="Zimbabwean">Zimbabwean</option>
+                    </select>
+
+                    <p>Gender:</p>
+                    <input type="radio" name="GNDR" value="Male"><label>Male</label>
+                    <input type="radio" name="GNDR" value="Female"><label>Female</label>
+
+                    <p>Birthday:</p>
+                    <label for="Birthday"></label> </label><input type="date" name="Birthday"><br>
+
+                    <p>Height (in cm)</p>
+                    <label for="Height"></label> </label><input type="number" name="Height">
+                    <p>Weight (in kg)</p>
+                    <label for="Weight"></label> </label><input type="number" name="Weight">
+
+                    <p>Type Of Application (TOA)</p>
+                    <input type="radio" name="toa" value="New"><label>A. New</label><br>
+                    <input type="radio" name="toa" value="Delinquent"><label>B. Delinquent/Dormant License</label><br>
+                    <input type="radio" name="toa" value="ChangeClass"><label>C. Change Classification</label><br>
+                    &emsp;<input type="radio" name="toa" value="ProftoNon-Prof"><label>Prof to Non-Prof</label><br>
+                    &emsp;<input type="radio" name="toa" value="Non-ProftoProf"><label>Non-Prof to Prof</label><br>
+                    <input type="radio" name="toa" value="Foreign"><label>D. Foreign Lic. Conversion</label><br>
+                    <input type="radio" name="toa" value="Renewal"><label>E. Renewal</label><br>
+                    <input type="radio" name="toa" value="Additional"><label>F. Additional Restriction Code</label><br>
+                    <input type="radio" name="toa" value="Duplicate"><label>G. Duplicate</label><br>
+                    <input type="radio" name="toa" value="Revision"><label>H. Revision of Records</label><br>
+                    &emsp;<input type="checkbox" name="toa" value="ChAddress"><label>Change Address</label><br>
+                    &emsp;<input type="checkbox" name="toa" value="ChCivilStatus"><label>Change Civil Status</label><br>
+                    &emsp;<input type="checkbox" name="toa" value="ChName"><label>Change Name</label><br>
+                    &emsp;<input type="checkbox" name="toa" value="ChBirthday"><label>Change Date of Birth</label><br>
+                    &emsp;<input type="checkbox" name="toa" value="ChOther"><label>Others</label><br>
+                    
+                    <p>Type of License Applied For</p>
+                    <input type="radio" name="TLA" value="Student Permit"><label>Student Permit</label><br>
+                    <input type="radio" name="TLA" value="Non-Professional"><label>Non-Professional</label><br>
+                    <input type="radio" name="TLA" value="Professional"><label>Professional</label><br>
+                    <input type="radio" name="TLA" value="Conductor"><label>Conductor</label><br>
+
+
+                    <p>Driving Skill Acquired or will be Acquired Thru</p>
+                    <input type="radio" name="DSA" value="Driving School"><label>1. Driving School</label><br>
+                    <label for="DrivingSchool"></label> </label><input type="text" name="DrivingSchool"><br>
+                    <input type="radio" name="DSA" value="LPP"><label>2. Licensed Private Person</label>
+
+                    <p>Educational Attainment (EA)</p>
+                    <input type="radio" name="EA" value="1"><label>1. Informal Schooling</label><br>
+                    <input type="radio" name="EA" value="2"><label>2. Elementary</label><br>
+                    <input type="radio" name="EA" value="3"><label>3. High School</label><br>
+                    <input type="radio" name="EA" value="4"><label>4. Vocational</label><br>
+                    <input type="radio" name="EA" value="5"><label>5. College</label><br>
+                    <input type="radio" name="EA" value="6"><label>6. Post Graduate</label><br>
+
+                    <!--dropdown-->
+                    <p>Blood Type</p>
+                    <select name="BloodType">
+                        <option value="A+">A+</option>
+                        <option value="O+">O+</option>
+                        <option value="B+">B+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="A-">A-</option>
+                        <option value="O-">O-</option>
+                        <option value="B-">B-</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+
+                    <p>Organ Donor</p>
+                    <input type="radio" name="OD" value="Yes"><label>Yes</label>
+                    <input type="radio" name="OD" value="No"><label>No</label>
+                    
+                    <p>Civil Status</p>
+                    <input type="radio" name="CS" value="Single"><label>1. Single</label>
+                    <input type="radio" name="CS" value="Married"><label>2. Married</label>
+                    <input type="radio" name="CS" value="Widow"><label>3. Widow/er</label>
+                    <input type="radio" name="CS" value="Separated"><label>4. Separated</label>
+
+                    <p>Hair</p>
+                    <input type="radio" name="HR" value="Black"><label>1. Black</label>
+                    <input type="radio" name="HR" value="Brown"><label>2. Brown</label>
+                    <input type="radio" name="HR" value="Blonde"><label>3. Blonde</label>
+                    <input type="radio" name="HR" value="Gray"><label>4. Gray</label>
+                    <input type="radio" name="HR" value="Others"><label>5. Others(specify)</label>
+                    <label for="hair"></label> </label><input type="text" name="hair"><br>
+
+                    <p>Eyes</p>
+                    <input type="radio" name="IS" value="Black"><label>1. Black</label>
+                    <input type="radio" name="IS" value="Brown"><label>2. Brown</label>
+                    <input type="radio" name="IS" value="Gray"><label>3. Gray</label>
+                    <input type="radio" name="IS" value="Others"><label>4. Others(specify)</label>
+                    <label for="eyes"></label> </label><input type="text" name="eyes"><br>
+
+                    <p>Built</p>
+                    <input type="radio" name="BT" value="Light"><label>1. Light</label>
+                    <input type="radio" name="BT" value="Medium"><label>2. Medium</label>
+                    <input type="radio" name="BT" value="Heavy"><label>3. Heavy</label>
+                    
+                    <p>Complexion</p>
+                    <input type="radio" name="CX" value="Light"><label>1. Light</label>
+                    <input type="radio" name="CX" value="Fair"><label>2. Fair</label>
+                    <input type="radio" name="CX" value="Dark"><label>3. Dark</label>
+
+                    <p>Birthplace (City/Municipality, Province)</p>
+                    <select name="BCity">
+                        <optgroup label="CAVITE">
+                            <option value="Dasmarinas City">DASMARINAS CITY</option>
+                            <option value="Cavite City">CAVITE CITY</option>
+                            <option value="Tagaytay City">TAGAYTAY CITY</option>
+                            <option value="Trece Martires City">TRECE MARTIRES CITY</option>
+                            <option value="Alfonso">ALFONSO</option>
+                            <option value="Amadeo">AMADEO</option>
+                            <option value="Bacoor">BACOOR</option>
+                            <option value="Carmona">CARMONA</option>
+                            <option value="General Emilio Aguinaldo">GENERAL EMILIO AGUINALDO</option>
+                            <option value="General Mariano Alvarez">GENERAL MARIANO ALVAREZ</option>
+                            <option value="General Trias">GENERAL TRIAS</option>
+                            <option value="Imus">IMUS</option>
+                            <option value="Indang">INDANG</option>
+                            <option value="Kawit">KAWIT</option>
+                            <option value="Magallanes">MAGALLANES</option>
+                            <option value="Maragondon">MARAGONDON</option>
+                            <option value="Mendez">MENDEZ</option>
+                            <option value="Naic">NAIC</option>
+                            <option value="Noveleta">NOVELETA</option>
+                            <option value="Rosario">ROSARIO</option>
+                            <option value="Silang">SILANG</option>
+                            <option value="Tanza">TANZA</option>
+                            <option value="Ternate">TERNATE</option>
+                        </optgroup>
+                        <optgroup label="BATANGAS">
+                            <option value="Batangas City">BATANGAS CITY</option>
+                            <option value="Lipa City">LIPA CITY</option>
+                            <option value="Tanauan City">TANAUAN CITY</option>
+                            <option value="Sto. Tomas City">STO. TOMAS CITY</option>
+                            <option value="Batangas">BATANGAS</option>
+                            <option value="Bauan">BAUAN</option>
+                            <option value="Nasugbu">NASUGBU</option>
+                            <option value="Calaca">CALACA</option>
+                            <option value="Lemery">LEMERY</option>
+                            <option value="San Pascual">SAN PASCUAL</option>
+                            <option value="Taal">TAAL</option>
+                            <option value="Agoncillo">AGONCILLO</option>
+                            <option value="Alitagtag">ALITAGTAG</option>
+                            <option value="Balayan">BALAYAN</option>
+                            <option value="Calatagan">CALATAGAN</option>
+                            <option value="Cuenca">CUENCA</option>
+                            <option value="Ibaan">IBAAN</option>
+                            <option value="Laurel">LAUREL</option>
+                            <option value="Lian">LIAN</option>
+                            <option value="Lobo">LOBO</option>
+                            <option value="Mabini">MABINI</option>
+                            <option value="Malvar">MALVAR</option>
+                            <option value="Mataas na Kahoy">MATAAS NA KAHOY</option>
+                            <option value="Padre Garcia">PADRE GARCIA</option>
+                            <option value="Rosario">ROSARIO</option>
+                            <option value="San Jose">SAN JOSE</option>
+                            <option value="San Juan">SAN JUAN</option>
+                            <option value="San Luis">SAN LUIS</option>
+                            <option value="San Nicolas">SAN NICOLAS</option>
+                            <option value="San Teresita">SAN TERESITA</option>
+                            <option value="Taal">TAAL</option>
+                            <option value="Taysan">TAYSAN</option>
+                            <option value="Tingloy">TINGLOY</option>
+                            <option value="Tuy">TUY</option>
+                        </optgroup>
+                        <optgroup label="LAGUNA">
+                            <option value="Binan City">BINAN CITY</option>
+                            <option value="Cabuyao City">CABUYAO CITY</option>
+                            <option value="Calamba City">CALAMBA CITY</option>
+                            <option value="San Pablo City">SAN PABLO CITY</option>
+                            <option value="Santa Rosa City">SANTA ROSA CITY</option>
+                            <option value="Alaminos">ALAMINOS</option>
+                            <option value="Bay">BAY</option>
+                            <option value="Calauan">CALAUAN</option>
+                            <option value="Cavinti">CAVINTI</option>
+                            <option value="Famy">FAMY</option>
+                            <option value="Kalayaan">KALAYAAN</option>
+                            <option value="Liliw">LILIW</option>
+                            <option value="Los Baños">LOS BAÑOS</option>
+                            <option value="Luisiana">LUISIANA</option>
+                            <option value="Lumban">LUMBAN</option>
+                            <option value="Mabitac">MABITAC</option>
+                            <option value="Magdalena">MAGDALENA</option>
+                            <option value="Majayjay">MAJAYJAY</option>
+                            <option value="Nagcarlan">NAGCARLAN</option>
+                            <option value="Paete">PAETE</option>
+                            <option value="Pagsanjan">PAGSANJAN</option>
+                            <option value="Pakil">PAKIL</option>
+                            <option value="Pangil">PANGIL</option>
+                            <option value="Pila">PILA</option>
+                            <option value="Rizal">RIZAL</option>
+                            <option value="San Pedro">SAN PEDRO</option>
+                            <option value="Santa Cruz">SANTA CRUZ</option>
+                            <option value="Santa Maria">SANTA MARIA</option>
+                            <option value="Siniloan">SINILOAN</option>
+                            <option value="Victoria">VICTORIA</option>
+                        </optgroup>
+                        <optgroup label="QUEZON">
+                            <option value="Lucena City">LUCENA CITY</option>
+                            <option value="Tayabas City">TAYABAS CITY</option>
+                            <option value="Candelaria">CANDELARIA</option>
+                            <option value="Dolores">DOLORES</option>
+                            <option value="Lucban">LUCBAN</option>
+                            <option value="Sariaya">SARIAYA</option>
+                            <option value="Tiaong">TIAONG</option>
+                            <option value="Agdangan">AGDANGAN</option>
+                            <option value="Alabat">ALABAT</option>
+                            <option value="Atimonan">ATIMONAN</option>
+                            <option value="Buenavista">BUENAVISTA</option>
+                            <option value="Burdeos">BURDEOS</option>
+                            <option value="Calauag">CALAUAG</option>
+                            <option value="Catanauan">CATANAUAN</option>
+                            <option value="General Luna">GENERAL LUNA</option>
+                            <option value="General Nakar">GENERAL NAKAR</option>
+                            <option value="Guinayangan">GUINAYANGAN</option>
+                            <option value="Gumaca">GUMACA</option>
+                            <option value="Infanta">INFANTA</option>
+                            <option value="Jomalig">JOMALIG</option>
+                            <option value="Lopez">LOPEZ</option>
+                            <option value="Macalelon">MACALELON</option>
+                            <option value="Mauban">MAUBAN</option>
+                            <option value="Mulanay">MULANAY</option>
+                            <option value="Padre Burgos">PADRE BURGOS</option>
+                            <option value="Pagbilao">PAGBILAO</option>
+                            <option value="Panukulan">PANUKULAN</option>
+                            <option value="Patnanungan">PATNANUNGAN</option>
+                            <option value="Perez">PEREZ</option>
+                            <option value="Pitogo">PITOGO</option>
+                            <option value="Plaridel">PLARIDEL</option>
+                            <option value="Polillo">POLILLO</option>
+                            <option value="Quezon">QUEZON</option>
+                            <option value="Real">REAL</option>
+                            <option value="Sampaloc">SAMPALOC</option>
+                            <option value="San Andres">SAN ANDRES</option>
+                            <option value="San Antonio">SAN ANTONIO</option>
+                            <option value="San Francisco">SAN FRANCISCO</option>
+                            <option value="San Narciso">SAN NARCISO</option>
+                            <option value="Sariaya">SARIAYA</option>
+                            <option value="Tagkawayan">TAGKAWAYAN</option>
+                            <option value="Tiaong">TIAONG</option>
+                            <option value="Unisan">UNISAN</option>
+                        </optgroup>
+                        <optgroup label="RIZAL">
+                            <option value="Antipolo City">ANTIPOLO CITY</option>
+                            <option value="Angono">ANGONO</option>
+                            <option value="Baras">BARAS</option>
+                            <option value="Binangonan">BINANGONAN</option>
+                            <option value="Cainta">CAINTA</option>
+                            <option value="Cardona">CARDONA</option>
+                            <option value="Jalajala">JALAJALA</option>
+                            <option value="Morong">MORONG</option>
+                            <option value="Pililla">PILILLA</option>
+                            <option value="Rodriguez (Montalban)">RODRIGUEZ (MONTALBAN)</option>
+                            <option value="San Mateo">SAN MATEO</option>
+                            <option value="Tanay">TANAY</option>
+                            <option value="Taytay">TAYTAY</option>
+                            <option value="Teresa">TERESA</option>
+                        </optgroup>
+                    </select>
+
+                    <select name="BProvince">
+                        <option value="Cavite">CAVITE</option>
+                        <option value="Laguna">LAGUNA</option>
+                        <option value="Batangas">BATANGAS</option>
+                        <option value="Rizal">RIZAL</option>
+                        <option value="Quezon">QUEZON</option>
+                    </select>
+
+                    <p>Father's Name: (Family name, First Name, Middle Name) indicate even if deceased</p>
+                    <label for="Lastname"></label> <input type="text" name="FLastName">
+                    <label for="Firstname"></label> <input type="text" name="FFirstName">
+                    <label for="Middlename"></label> <input type="text" name="FMiddleName"><br>
+
+                    <p>Mother's Name: (Family name, First Name, Middle Name) indicate even if deceased</p>
+                    <label for="Lastname"></label> <input type="text" name="MLastName">
+                    <label for="Firstname"></label> <input type="text" name="MFirstName">
+                    <label for="Middlename"></label> <input type="text" name="MMiddleName"><br>
+
+                    <p>Spouse Name: (Family name, First Name, Middle Name)</p>
+                    <label for="Lastname"></label> <input type="text" name="SLastName">
+                    <label for="Firstname"></label><input type="text" name="SFirstName">
+                    <label for="Middlename"></label><input type="text" name="SMiddleName"><br>
+
+                    <p>Employer's Business Name:    Tel No.</p>
+                    <label for="BusinessName"></label><input type="text" name="BusinessName">
+                    <label for="TelNumber"></label> <input type="tel" name="TelNumber">
+                    <p>Employer's Business Address: (No. Street, City/Municipality, Province)</p>
+                    <label for="address"></label> <input type="text" name="EStreet">
+                    <select name="ECity">
+                        <optgroup label="CAVITE">
+                            <option value="Dasmarinas City">DASMARINAS CITY</option>
+                            <option value="Cavite City">CAVITE CITY</option>
+                            <option value="Tagaytay City">TAGAYTAY CITY</option>
+                            <option value="Trece Martires City">TRECE MARTIRES CITY</option>
+                            <option value="Alfonso">ALFONSO</option>
+                            <option value="Amadeo">AMADEO</option>
+                            <option value="Bacoor">BACOOR</option>
+                            <option value="Carmona">CARMONA</option>
+                            <option value="General Emilio Aguinaldo">GENERAL EMILIO AGUINALDO</option>
+                            <option value="General Mariano Alvarez">GENERAL MARIANO ALVAREZ</option>
+                            <option value="General Trias">GENERAL TRIAS</option>
+                            <option value="Imus">IMUS</option>
+                            <option value="Indang">INDANG</option>
+                            <option value="Kawit">KAWIT</option>
+                            <option value="Magallanes">MAGALLANES</option>
+                            <option value="Maragondon">MARAGONDON</option>
+                            <option value="Mendez">MENDEZ</option>
+                            <option value="Naic">NAIC</option>
+                            <option value="Noveleta">NOVELETA</option>
+                            <option value="Rosario">ROSARIO</option>
+                            <option value="Silang">SILANG</option>
+                            <option value="Tanza">TANZA</option>
+                            <option value="Ternate">TERNATE</option>
+                        </optgroup>
+                        <optgroup label="BATANGAS">
+                            <option value="Batangas City">BATANGAS CITY</option>
+                            <option value="Lipa City">LIPA CITY</option>
+                            <option value="Tanauan City">TANAUAN CITY</option>
+                            <option value="Sto. Tomas City">STO. TOMAS CITY</option>
+                            <option value="Batangas">BATANGAS</option>
+                            <option value="Bauan">BAUAN</option>
+                            <option value="Nasugbu">NASUGBU</option>
+                            <option value="Calaca">CALACA</option>
+                            <option value="Lemery">LEMERY</option>
+                            <option value="San Pascual">SAN PASCUAL</option>
+                            <option value="Taal">TAAL</option>
+                            <option value="Agoncillo">AGONCILLO</option>
+                            <option value="Alitagtag">ALITAGTAG</option>
+                            <option value="Balayan">BALAYAN</option>
+                            <option value="Calatagan">CALATAGAN</option>
+                            <option value="Cuenca">CUENCA</option>
+                            <option value="Ibaan">IBAAN</option>
+                            <option value="Laurel">LAUREL</option>
+                            <option value="Lian">LIAN</option>
+                            <option value="Lobo">LOBO</option>
+                            <option value="Mabini">MABINI</option>
+                            <option value="Malvar">MALVAR</option>
+                            <option value="Mataas na Kahoy">MATAAS NA KAHOY</option>
+                            <option value="Padre Garcia">PADRE GARCIA</option>
+                            <option value="Rosario">ROSARIO</option>
+                            <option value="San Jose">SAN JOSE</option>
+                            <option value="San Juan">SAN JUAN</option>
+                            <option value="San Luis">SAN LUIS</option>
+                            <option value="San Nicolas">SAN NICOLAS</option>
+                            <option value="San Teresita">SAN TERESITA</option>
+                            <option value="Taal">TAAL</option>
+                            <option value="Taysan">TAYSAN</option>
+                            <option value="Tingloy">TINGLOY</option>
+                            <option value="Tuy">TUY</option>
+                        </optgroup>
+                        <optgroup label="LAGUNA">
+                            <option value="Binan City">BINAN CITY</option>
+                            <option value="Cabuyao City">CABUYAO CITY</option>
+                            <option value="Calamba City">CALAMBA CITY</option>
+                            <option value="San Pablo City">SAN PABLO CITY</option>
+                            <option value="Santa Rosa City">SANTA ROSA CITY</option>
+                            <option value="Alaminos">ALAMINOS</option>
+                            <option value="Bay">BAY</option>
+                            <option value="Calauan">CALAUAN</option>
+                            <option value="Cavinti">CAVINTI</option>
+                            <option value="Famy">FAMY</option>
+                            <option value="Kalayaan">KALAYAAN</option>
+                            <option value="Liliw">LILIW</option>
+                            <option value="Los Baños">LOS BAÑOS</option>
+                            <option value="Luisiana">LUISIANA</option>
+                            <option value="Lumban">LUMBAN</option>
+                            <option value="Mabitac">MABITAC</option>
+                            <option value="Magdalena">MAGDALENA</option>
+                            <option value="Majayjay">MAJAYJAY</option>
+                            <option value="Nagcarlan">NAGCARLAN</option>
+                            <option value="Paete">PAETE</option>
+                            <option value="Pagsanjan">PAGSANJAN</option>
+                            <option value="Pakil">PAKIL</option>
+                            <option value="Pangil">PANGIL</option>
+                            <option value="Pila">PILA</option>
+                            <option value="Rizal">RIZAL</option>
+                            <option value="San Pedro">SAN PEDRO</option>
+                            <option value="Santa Cruz">SANTA CRUZ</option>
+                            <option value="Santa Maria">SANTA MARIA</option>
+                            <option value="Siniloan">SINILOAN</option>
+                            <option value="Victoria">VICTORIA</option>
+                        </optgroup>
+                        <optgroup label="QUEZON">
+                            <option value="Lucena City">LUCENA CITY</option>
+                            <option value="Tayabas City">TAYABAS CITY</option>
+                            <option value="Candelaria">CANDELARIA</option>
+                            <option value="Dolores">DOLORES</option>
+                            <option value="Lucban">LUCBAN</option>
+                            <option value="Sariaya">SARIAYA</option>
+                            <option value="Tiaong">TIAONG</option>
+                            <option value="Agdangan">AGDANGAN</option>
+                            <option value="Alabat">ALABAT</option>
+                            <option value="Atimonan">ATIMONAN</option>
+                            <option value="Buenavista">BUENAVISTA</option>
+                            <option value="Burdeos">BURDEOS</option>
+                            <option value="Calauag">CALAUAG</option>
+                            <option value="Catanauan">CATANAUAN</option>
+                            <option value="General Luna">GENERAL LUNA</option>
+                            <option value="General Nakar">GENERAL NAKAR</option>
+                            <option value="Guinayangan">GUINAYANGAN</option>
+                            <option value="Gumaca">GUMACA</option>
+                            <option value="Infanta">INFANTA</option>
+                            <option value="Jomalig">JOMALIG</option>
+                            <option value="Lopez">LOPEZ</option>
+                            <option value="Macalelon">MACALELON</option>
+                            <option value="Mauban">MAUBAN</option>
+                            <option value="Mulanay">MULANAY</option>
+                            <option value="Padre Burgos">PADRE BURGOS</option>
+                            <option value="Pagbilao">PAGBILAO</option>
+                            <option value="Panukulan">PANUKULAN</option>
+                            <option value="Patnanungan">PATNANUNGAN</option>
+                            <option value="Perez">PEREZ</option>
+                            <option value="Pitogo">PITOGO</option>
+                            <option value="Plaridel">PLARIDEL</option>
+                            <option value="Polillo">POLILLO</option>
+                            <option value="Quezon">QUEZON</option>
+                            <option value="Real">REAL</option>
+                            <option value="Sampaloc">SAMPALOC</option>
+                            <option value="San Andres">SAN ANDRES</option>
+                            <option value="San Antonio">SAN ANTONIO</option>
+                            <option value="San Francisco">SAN FRANCISCO</option>
+                            <option value="San Narciso">SAN NARCISO</option>
+                            <option value="Sariaya">SARIAYA</option>
+                            <option value="Tagkawayan">TAGKAWAYAN</option>
+                            <option value="Tiaong">TIAONG</option>
+                            <option value="Unisan">UNISAN</option>
+                        </optgroup>
+                        <optgroup label="RIZAL">
+                            <option value="Antipolo City">ANTIPOLO CITY</option>
+                            <option value="Angono">ANGONO</option>
+                            <option value="Baras">BARAS</option>
+                            <option value="Binangonan">BINANGONAN</option>
+                            <option value="Cainta">CAINTA</option>
+                            <option value="Cardona">CARDONA</option>
+                            <option value="Jalajala">JALAJALA</option>
+                            <option value="Morong">MORONG</option>
+                            <option value="Pililla">PILILLA</option>
+                            <option value="Rodriguez (Montalban)">RODRIGUEZ (MONTALBAN)</option>
+                            <option value="San Mateo">SAN MATEO</option>
+                            <option value="Tanay">TANAY</option>
+                            <option value="Taytay">TAYTAY</option>
+                            <option value="Teresa">TERESA</option>
+                        </optgroup>
+                        </select>
+                    </select>
+                    <select name="EProvince">
+                        <option value="Cavite">CAVITE</option>
+                        <option value="Laguna">LAGUNA</option>
+                        <option value="Batangas">BATANGAS</option>
+                        <option value="Rizal">RIZAL</option>
+                        <option value="Quezon">QUEZON</option>
+                    </select>
+
+
+                    <p>Previous Name: (Family name, First Name, Middle Name)</p>
+                    <label for="Lastname"></label> </label><input type="text" name="PLastName">
+                    <label for="Firstname"></label> </label><input type="text" name="PFirstName">
+                    <label for="Middlename"></label> </label><input type="text" name="PMiddleName"><br>
+                    
+                    <br>
+                <input type="submit" class="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
